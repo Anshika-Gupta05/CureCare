@@ -37,7 +37,7 @@ const Navbar = () => {
           <li className="py-1">Contact</li>{" "}
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
-        <NavLink to={`${adminUrl}/`}>
+        <NavLink to={`${adminUrl}`}>
           <p className="border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600">
             Admin Panel
           </p>

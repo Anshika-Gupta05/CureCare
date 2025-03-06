@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white">
       <div className="flex items-center gap-2 text-xs">
-        <NavLink to={`${frontendUrl}/`}>
+        <NavLink to={`${frontendUrl}`}>
           <img
             className="w-36 sm:w-40 cursor-pointer"
             src={assets.admin_logo}

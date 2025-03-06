@@ -11,10 +11,22 @@ const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
+const allowedOrigins = [
+  "https://cure-care-frontend.vercel.app",
+  "https://cure-care-admin.vercel.app"
+];
 // middlewares
 app.use(express.json());
-app.use(cors({ origin: "https://cure-care-frontend.vercel.app" }));
-
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 // API endpoints
 app.use("/api/admin", adminRouter);
 app.use("/api/doctor", doctorRouter);

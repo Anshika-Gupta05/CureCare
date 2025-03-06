@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useEffect } from "react";
 export const AppContext = createContext();
-export const adminUrl = "https://curecare-admin.onrender.com/";
+export const adminUrl = "https://cure-care-admin.vercel.app/";
 const AppContextProvider = (props) => {
   const currency = "₹";
   const backendUrl = import.meta.env.VITE_BACKEND_URL;

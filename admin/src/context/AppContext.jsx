@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 export const AppContext = createContext();
-export const frontendUrl = import.meta.env.VITE_FRONTEND_URL;
+export const frontendUrl = "https://curecare-frontend.onrender.com/";
 
 const AppContextProvider = (props) => {
   const currency = "₹";
